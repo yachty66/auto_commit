@@ -4,7 +4,7 @@ Automate Git add, commit, and push with AI-generated commit messages.
 
 ## Quick Setup
 
-- Clone repo: `git clone https://github.com/yourusername/auto_commit.git`
+- Clone repo: `git clone https://github.com/yachty66/auto_commit.git`
 - Install dependencies: `pip install openai python-dotenv`
 - Make script executable: `chmod +x lfg.py`
 - Add to PATH: `sudo ln -s "$(pwd)/lfg.py" /usr/local/bin/lfg`
