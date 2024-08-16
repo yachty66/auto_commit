@@ -62,7 +62,6 @@ def main():
     commit_message = args.message if args.message else generate_commit_message()
 
     if args.dry_run:
-        # ... (keep this part as is) ...
         pass
 
     # Perform git operations
