@@ -22,10 +22,12 @@ def run_command(command):
     stdout, stderr = process.communicate()
     return stdout.decode().strip(), stderr.decode().strip(), process.returncode
 
+
 def get_git_diff():
     diff = run_command("git diff --cached")[0]
     print("Git diff output:", diff)  # Debug print
     return diff
+
 
 def generate_commit_message():
     diff = get_git_diff()
@@ -47,7 +49,6 @@ def get_git_status():
 
 
 def main():
-    print("testing")
     parser = argparse.ArgumentParser(
         description="LFG - Let's Freakin' Go (Git add, commit, and push)"
     )
@@ -59,9 +60,7 @@ def main():
     )
     args = parser.parse_args()
 
-    # Perform git add before generating the commit message
-    print("Adding all changes...")
-    run_command("git add .") 
+    run_command("git add .")
 
     commit_message = args.message if args.message else generate_commit_message()
 
