@@ -22,5 +22,3 @@ Add this line to your `~/.bashrc` or `~/.zshrc` for persistence.
 In any Git repository:
 - Run `lfg` to add, commit, and push changes
 - Use `lfg -m "Custom message"` for custom commits
-
-dll
