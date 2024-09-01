@@ -25,7 +25,6 @@ def run_command(command):
 
 def get_git_diff():
     diff = run_command("git diff --cached")[0]
-    print("Git diff output:", diff)  # Debug print
     return diff
 
 
