@@ -59,15 +59,17 @@ def main():
     )
     args = parser.parse_args()
 
+    # Perform git add before generating the commit message
+    print("Adding all changes...")
+    run_command("git add .") 
+
     commit_message = args.message if args.message else generate_commit_message()
 
     if args.dry_run:
-        pass
+        print(f"Dry run: Commit message would be: {commit_message}")
+        return
 
     # Perform git operations
-    print("Adding all changes...")
-    run_command("git add .")
-
     print(f"Committing with message: {commit_message}")
     _, stderr, rc = run_command(f'git commit -m "{commit_message}"')
     if rc != 0:
