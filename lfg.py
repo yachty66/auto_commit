@@ -31,6 +31,8 @@ def generate_commit_message():
     diff = get_git_diff()
     prompt = f"Based on the following git diff, generate a concise and informative commit message:\n\n{diff}\n\nReturn your response in JSON like {{'commit_message': 'your message'}}:"
 
+    print("prompt: ", prompt)
+
     response = client.chat.completions.create(
         model="gpt-4o-mini",  # Make sure to use an appropriate model
         response_format={"type": "json_object"},
