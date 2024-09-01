@@ -48,6 +48,7 @@ def get_git_status():
 
 
 def main():
+    print("testing")
     parser = argparse.ArgumentParser(
         description="LFG - Let's Freakin' Go (Git add, commit, and push)"
     )
